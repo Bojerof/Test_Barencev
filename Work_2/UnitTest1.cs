@@ -7,6 +7,6 @@ public class UnitTest1
     [Test]
     public void TestNumber()
     {
-        Assert.AreEqual();
+        
     }
 }
