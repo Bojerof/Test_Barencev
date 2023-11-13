@@ -19,12 +19,19 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.15.0" />
     <PackageReference Include="Selenium.Support" Version="4.15.0" />
+    <PackageReference Include="Aspose.Diagram" Version="23.11.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Work\" />
+    <None Remove="Work\Tests\" />
+    <None Remove="Work\Model\" />
+    <None Remove="Work\Appmanager\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Work\" />
+    <Folder Include="Work\Tests\" />
+    <Folder Include="Work\Model\" />
+    <Folder Include="Work\Appmanager\" />
   </ItemGroup>
 </Project>
