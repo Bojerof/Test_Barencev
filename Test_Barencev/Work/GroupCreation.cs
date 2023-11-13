@@ -2,26 +2,23 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-namespace Selenium
+
+namespace Work_1
 {
     [TestFixture]
-    public class TestCaseDialog
+    public class GroupCreation
     {
         private IWebDriver driver;
         private StringBuilder verificationErrors;
         private string baseURL;
         private bool acceptNextAlert = true;
-        private User user;
 
         [SetUp]
         public void SetupTest()
         {
             driver = new ChromeDriver();
-            baseURL = "https://stats.tis-dialog.ru/index.php";
+            baseURL = "http://localhost/addressbook/index.php";
             verificationErrors = new StringBuilder();
-            user = new User("2730453", "27304532730453");
         }
 
         [TearDown]
@@ -39,40 +36,54 @@ namespace Selenium
         }
 
         [Test]
-        public void TheUntitledTestCaseTest()
+        public void GroupCreationTest()
         {
-            OpenWebSite();
-            InputLogin();
-            InputPassword();
-            InputCategories();
-            OutWebSite();
+            OpenHomePage();
+            Login(new Account("admin", "secret"));
+            GotoGroupsPage();
+            InitNewGroupCreation();
+            FillGroupForm(new GroupDate("aaa", "ddd", "fff"));
+            SubmitGroupCreation();
+            GotoGroupsPage();
         }
 
-        private void OutWebSite()
+        private void SubmitGroupCreation()
         {
-            driver.FindElement(By.XPath("//a[@id='exitlink']/span")).Click();
+            driver.FindElement(By.Name("submit")).Click();
         }
 
-        private void InputCategories()
+        private void FillGroupForm(GroupDate groupDate)
         {
-            driver.FindElement(By.LinkText("Услуги")).Click();
+            driver.FindElement(By.Name("group_name")).Click();
+            driver.FindElement(By.Name("group_name")).Clear();
+            driver.FindElement(By.Name("group_name")).SendKeys(groupDate.Name);
+            driver.FindElement(By.Name("group_header")).Clear();
+            driver.FindElement(By.Name("group_header")).SendKeys(groupDate.Header);
+            driver.FindElement(By.Name("group_footer")).Clear();
+            driver.FindElement(By.Name("group_footer")).SendKeys(groupDate.Footer);
         }
 
-        private void InputPassword()
+        private void InitNewGroupCreation()
         {
-            driver.FindElement(By.Name("passv")).Clear();
-            driver.FindElement(By.Name("passv")).SendKeys(user.Password);
-            driver.FindElement(By.Name("passv")).SendKeys(Keys.Enter);
+            driver.FindElement(By.Name("new")).Click();
         }
 
-        private void InputLogin()
+        private void GotoGroupsPage()
         {
-            driver.FindElement(By.Name("login")).Click();
-            driver.FindElement(By.Name("login")).Clear();
-            driver.FindElement(By.Name("login")).SendKeys(user.Login);
+            driver.FindElement(By.LinkText("groups")).Click();
         }
 
-        private void OpenWebSite()
+        private void Login(Account account)
+        {
+            driver.FindElement(By.Name("user")).Click();
+            driver.FindElement(By.Name("user")).Clear();
+            driver.FindElement(By.Name("user")).SendKeys(account.Username);
+            driver.FindElement(By.Name("pass")).Clear();
+            driver.FindElement(By.Name("pass")).SendKeys(account.Password);
+            driver.FindElement(By.XPath("//input[@value='Login']")).Click();
+        }
+
+        private void OpenHomePage()
         {
             driver.Navigate().GoToUrl(baseURL);
         }

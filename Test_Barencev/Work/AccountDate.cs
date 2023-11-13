@@ -1,24 +1,24 @@
 ﻿using System;
-namespace Selenium
+namespace Work_1
 {
-	public class User
+	public class Account
 	{
-		private string login;
+		private string username;
 		private string password;
-		public User(string login, string password)
+		public Account(string username, string password)
 		{
-			this.login = login;
+			this.username = username;
 			this.password = password;
 		}
-		public string Login
+		public string Username
 		{
 			get
 			{
-				return login;
+				return username;
 			}
 			set
 			{
-				login = value;
+				username = value;
 			}
 		}
 		public string Password
