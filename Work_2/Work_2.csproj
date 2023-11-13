@@ -21,4 +21,10 @@
     <PackageReference Include="Selenium.Support" Version="4.15.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Work\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Work\" />
+  </ItemGroup>
 </Project>
