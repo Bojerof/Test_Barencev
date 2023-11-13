@@ -11,6 +11,8 @@ namespace Work_2.Work
         public void SetupTest()
         {
             app = new ApplicationManager();
+            app.Navigator.OpenHomePage();
+            app.Auth.Login(new AccountDate("admin", "secret"));
         }
 
         [TearDown]

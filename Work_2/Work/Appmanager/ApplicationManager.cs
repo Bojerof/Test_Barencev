@@ -14,11 +14,12 @@ namespace Work_2.Work
 
         public ApplicationManager()
         {
-            loginHelper = new LoginHelper(driver);
-            navigation = new NavigationHelper(driver, baseURL);
-            groupHelper = new GroupHelper(driver);
+            loginHelper = new LoginHelper(this);
+            navigation = new NavigationHelper(this, baseURL);
+            groupHelper = new GroupHelper(this);
         }
 
+        public IWebDriver Driver { get => driver; set => driver = value; }
         public void Stop()
         {
             try
@@ -35,7 +36,7 @@ namespace Work_2.Work
 
         public NavigationHelper Navigator { get => navigation; set => navigation = value; }
 
-        public GroupHelper Group { get => groupHelper; set => groupHelper = value; }
+        public GroupHelper Groups { get => groupHelper; set => groupHelper = value; }
     }
 }
 

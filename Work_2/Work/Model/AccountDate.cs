@@ -1,5 +1,4 @@
-﻿using System;
-namespace Work_2.Work
+﻿namespace Work_2.Work
 {
 	public class AccountDate
 	{

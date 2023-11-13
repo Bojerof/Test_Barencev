@@ -8,13 +8,20 @@ namespace Work_2.Work
         [Test]
         public void GroupCreationTest()
         {
-            app.Navigator.OpenHomePage();
-            app.Auth.Login(new AccountDate("admin", "secret"));
-            app.Navigator.GotoGroupsPage();
-            app.Group.InitNewGroupCreation();
-            app.Group.FillGroupForm(new GroupDate("aaa", "ddd", "fff"));
-            app.Group.SubmitGroupCreation();
-            app.Navigator.GotoGroupsPage();
+            GroupDate group = new GroupDate("aaa");
+            group.Header = "ddd";
+            group.Footer = "fff";
+            app.Groups.Create(group);
+        }
+
+        [Test]
+        public void EmptyGroupCreationTest()
+        {
+
+            GroupDate group = new GroupDate("");
+            group.Header = "";
+            group.Footer = "";
+            app.Groups.Create(group);
         }
     }
 }

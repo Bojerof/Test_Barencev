@@ -1,11 +1,10 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace Work_2.Work
 {
 	public class LoginHelper : HelperBase
 	{
-        public LoginHelper(IWebDriver driver) : base(driver) { }
+        public LoginHelper(ApplicationManager manager) : base(manager) { }
         
 
         public void Login(AccountDate account)
