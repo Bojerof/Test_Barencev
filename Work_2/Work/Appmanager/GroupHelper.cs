@@ -1,6 +1,4 @@
-﻿
-using Aspose.Diagram;
-using System.Numerics;
+﻿using System.Numerics;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 

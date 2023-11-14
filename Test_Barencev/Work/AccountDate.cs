@@ -10,28 +10,9 @@ namespace Work_1
 			this.username = username;
 			this.password = password;
 		}
-		public string Username
-		{
-			get
-			{
-				return username;
-			}
-			set
-			{
-				username = value;
-			}
-		}
-		public string Password
-		{
-			get
-			{
-				return password;
-			}
-			set
-			{
-				password = value;
-			}
-		}
+		public string Username { get => username; set => username = value; }
+		
+		public string Password { get => password; set => password = value; }
 	}
 
 }

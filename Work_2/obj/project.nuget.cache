@@ -1,14 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zhTtUGkXW8VYaoJI4D14B0kXqfFfX4SbED2GYrXHPEvaaXnIjbX2ju1tTwbYGdH26aKFRIKDdezgUHwUb5Kahw==",
+  "dgSpecHash": "SrRa+VtGboDwpoZ0lgPgQCiPVdJNUuzfSXngdmwusS1gbAJ0Ey83gMRuguPSwRKpgigqXCSLfcawsql0YXNo0A==",
   "success": true,
   "projectFilePath": "/Users/bojeroff/Projects/Test_Barencev/Work_2/Work_2.csproj",
   "expectedPackageFiles": [
-    "/Users/bojeroff/.nuget/packages/aspose.diagram/23.11.0/aspose.diagram.23.11.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
-    "/Users/bojeroff/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "/Users/bojeroff/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/microsoft.testplatform.objectmodel/17.8.0/microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/microsoft.testplatform.testhost/17.8.0/microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
@@ -20,8 +19,7 @@
     "/Users/bojeroff/.nuget/packages/selenium.support/4.15.0/selenium.support.4.15.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/selenium.webdriver/4.15.0/selenium.webdriver.4.15.0.nupkg.sha512",
     "/Users/bojeroff/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512",
-    "/Users/bojeroff/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
-    "/Users/bojeroff/.nuget/packages/system.text.encoding.codepages/4.7.0/system.text.encoding.codepages.4.7.0.nupkg.sha512"
+    "/Users/bojeroff/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
   "logs": []
 }
