@@ -3,7 +3,7 @@
 namespace Work_3.Work
 {
     [TestFixture]
-    public class GroupCreationTests : TestBase
+    public class GroupCreationTests : AuthTestBase
     {
         [Test]
         public void GroupCreationTest()
@@ -18,9 +18,9 @@ namespace Work_3.Work
         public void EmptyGroupCreationTest()
         {
 
-            GroupDate group = new GroupDate("");
-            group.Header = "";
-            group.Footer = "";
+            GroupDate group = new GroupDate("f");
+            group.Header = "g";
+            group.Footer = "h";
             app.Groups.Create(group);
         }
     }

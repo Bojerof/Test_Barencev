@@ -7,10 +7,14 @@ namespace Work_3.Work
         protected ApplicationManager app;
 
         [SetUp]
-        public void SetupTest()
+        public void SetupApplicationManager()
         {
             app = ApplicationManager.GetInstance();
-
+        }
+        [OneTimeTearDown]
+        public void StopApplicationManager()
+        {
+            app.Stop();
         }
     }
 }

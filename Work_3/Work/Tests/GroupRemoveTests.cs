@@ -3,7 +3,7 @@
 namespace Work_3.Work
 {
     [TestFixture]
-    public class GroupRemoveTests : TestBase
+    public class GroupRemoveTests : AuthTestBase
     {
         [Test]
         public void GroupRemoveTest()

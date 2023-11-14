@@ -8,7 +8,7 @@ using OpenQA.Selenium.Support.UI;
 namespace Work_3.Work
 {
     [TestFixture]
-    public class PhoneCreationTests : TestBase
+    public class PhoneCreationTests : AuthTestBase
     {
 
         [Test]

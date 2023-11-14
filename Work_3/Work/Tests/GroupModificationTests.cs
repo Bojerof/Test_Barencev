@@ -4,8 +4,8 @@ using NUnit.Framework;
 namespace Work_3.Work
 {
 	[TestFixture]
-	public class GroupModificationTests : TestBase
-	{
+	public class GroupModificationTests : AuthTestBase
+    {
 		[Test]
 		public void GroupModificationTest()
 		{
