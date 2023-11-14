@@ -21,6 +21,17 @@ namespace Work_2.Work
         {
             driver.FindElement(By.LinkText("groups")).Click();
         }
+
+        public void GotoHomePage()
+        {
+            driver.FindElement(By.LinkText("home")).Click();
+        }
+
+        //Homework
+        public void GoToAddNew()
+        {
+            driver.FindElement(By.LinkText("add new")).Click();
+        }
     }
 }
 

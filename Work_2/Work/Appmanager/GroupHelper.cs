@@ -1,5 +1,8 @@
 ﻿
+using Aspose.Diagram;
+using System.Numerics;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Work_2.Work
 {
@@ -16,6 +19,15 @@ namespace Work_2.Work
             FillGroupForm(group);
             SubmitGroupCreation();
             ReturnToGroupsPage();
+            return this;
+        }
+
+        //метод добавления нового номера
+        public GroupHelper CreatePhone(PhoneDate phone)
+        {
+            manager.Navigator.GoToAddNew();
+            CreateNewNumberPhone(phone);
+            manager.Navigator.GotoHomePage();
             return this;
         }
 
@@ -71,6 +83,68 @@ namespace Work_2.Work
             return this;
         }
 
+        //Homework
+        public GroupHelper CreateNewNumberPhone(PhoneDate phone)
+        {
+            driver.FindElement(By.Name("firstname")).Click();
+            driver.FindElement(By.Name("firstname")).Clear();
+            driver.FindElement(By.Name("firstname")).SendKeys(phone.Fistname);
+            driver.FindElement(By.Name("middlename")).Clear();
+            driver.FindElement(By.Name("middlename")).SendKeys(phone.Middlename);
+            driver.FindElement(By.Name("lastname")).Clear();
+            driver.FindElement(By.Name("lastname")).SendKeys(phone.Lastname);
+            driver.FindElement(By.Name("nickname")).Clear();
+            driver.FindElement(By.Name("nickname")).SendKeys(phone.Nickname);
+            driver.FindElement(By.Name("title")).Click();
+            driver.FindElement(By.Name("title")).Click();
+            driver.FindElement(By.Name("title")).Clear();
+            driver.FindElement(By.Name("title")).SendKeys(phone.Title);
+            driver.FindElement(By.Name("company")).Clear();
+            driver.FindElement(By.Name("company")).SendKeys(phone.Company);
+            driver.FindElement(By.Name("address")).Clear();
+            driver.FindElement(By.Name("address")).SendKeys(phone.Address);
+            driver.FindElement(By.Name("home")).Clear();
+            driver.FindElement(By.Name("home")).SendKeys(phone.Home);
+            driver.FindElement(By.Name("mobile")).Clear();
+            driver.FindElement(By.Name("mobile")).SendKeys(phone.Mobile);
+            driver.FindElement(By.Name("work")).Clear();
+            driver.FindElement(By.Name("work")).SendKeys(phone.Work);
+            driver.FindElement(By.Name("fax")).Clear();
+            driver.FindElement(By.Name("fax")).SendKeys(phone.Fax);
+            driver.FindElement(By.Name("email")).Clear();
+            driver.FindElement(By.Name("email")).SendKeys(phone.Email);
+            driver.FindElement(By.Name("email2")).Clear();
+            driver.FindElement(By.Name("email2")).SendKeys(phone.Email2);
+            driver.FindElement(By.Name("email3")).Clear();
+            driver.FindElement(By.Name("email3")).SendKeys(phone.Email3);
+            driver.FindElement(By.Name("homepage")).Clear();
+            driver.FindElement(By.Name("homepage")).SendKeys(phone.Homepage);
+            driver.FindElement(By.Name("bday")).Click();
+            new SelectElement(driver.FindElement(By.Name("bday"))).SelectByText(phone.Bday);
+            driver.FindElement(By.Name("bmonth")).Click();
+            new SelectElement(driver.FindElement(By.Name("bmonth"))).SelectByText(phone.Bmonth);
+            driver.FindElement(By.Name("byear")).Click();
+            driver.FindElement(By.Name("byear")).Clear();
+            driver.FindElement(By.Name("byear")).SendKeys(phone.Byear);
+            driver.FindElement(By.Name("aday")).Click();
+            new SelectElement(driver.FindElement(By.Name("aday"))).SelectByText(phone.Aday);
+            driver.FindElement(By.Name("amonth")).Click();
+            new SelectElement(driver.FindElement(By.Name("amonth"))).SelectByText(phone.Amonth);
+            driver.FindElement(By.Name("ayear")).Click();
+            driver.FindElement(By.Name("ayear")).Clear();
+            driver.FindElement(By.Name("ayear")).SendKeys(phone.Ayear);
+            driver.FindElement(By.Name("address2")).Click();
+            driver.FindElement(By.Name("address2")).Clear();
+            driver.FindElement(By.Name("address2")).SendKeys(phone.Adress);
+            driver.FindElement(By.Name("phone2")).Click();
+            driver.FindElement(By.Name("phone2")).Clear();
+            driver.FindElement(By.Name("phone2")).SendKeys(phone.Phone2);
+            driver.FindElement(By.Name("notes")).Click();
+            driver.FindElement(By.Name("notes")).Clear();
+            driver.FindElement(By.Name("notes")).SendKeys(phone.Notes);
+            driver.FindElement(By.XPath("//div[@id='content']/form/input[21]")).Click();
+            return this;
+        }
     }
 }
 

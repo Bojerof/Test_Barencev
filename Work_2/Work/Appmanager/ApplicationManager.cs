@@ -20,6 +20,7 @@ namespace Work_2.Work
         }
 
         public IWebDriver Driver { get => driver; set => driver = value; }
+
         public void Stop()
         {
             try

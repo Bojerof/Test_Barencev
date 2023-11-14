@@ -1,37 +1,19 @@
-﻿namespace Work_2.Work
+﻿
+namespace Work_2.Work
 {
-	public class AccountDate
+	public struct AccountDate
 	{
-		private string username;
+		private string userName;
 		private string password;
-		public AccountDate(string username, string password)
+		public AccountDate(string userName, string password)
 		{
-			this.username = username;
+			this.userName = userName;
 			this.password = password;
 		}
-		public string Username
-		{
-			get
-			{
-				return username;
-			}
-			set
-			{
-				username = value;
-			}
-		}
-		public string Password
-		{
-			get
-			{
-				return password;
-			}
-			set
-			{
-				password = value;
-			}
-		}
-	}
 
+		public string Username { get => userName; set => userName = value; }
+
+		public string Password { get => password; set => password = value; }
+	}
 }
 
