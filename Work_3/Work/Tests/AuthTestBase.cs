@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace Work_3.Work
 {
+
 	public class AuthTestBase : TestBase
 	{
 		[SetUp]

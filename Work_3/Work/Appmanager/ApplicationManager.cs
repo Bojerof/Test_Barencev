@@ -21,11 +21,12 @@ namespace Work_3.Work
             groupHelper = new GroupHelper(this);
         }
 
+        //Деструктор не отрабатывает
+        //Как сделать чтобы он отрабатывал, я не понимаю
         ~ApplicationManager()
         {
             try
             {
-                Console.WriteLine("Work");
                 driver.Quit();
             }
             catch (Exception)
@@ -36,7 +37,7 @@ namespace Work_3.Work
 
         public static ApplicationManager GetInstance()
         {
-            if (!app.IsValueCreated)
+            if (! app.IsValueCreated)
             {
                 ApplicationManager newInstance = new ApplicationManager();
                 newInstance.Navigator.OpenHomePage();
@@ -45,18 +46,17 @@ namespace Work_3.Work
             return app.Value;
         }
 
-        public void Stop()
-        {
-            try
-            {
-                Console.WriteLine("Work");
-                driver.Quit();
-            }
-            catch (Exception)
-            {
-                // Ignore errors if unable to close the browser
-            }
-        }
+        //public void Stop()
+        //{
+        //    try
+        //    {
+        //        driver.Quit();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        // Ignore errors if unable to close the browser
+        //    }
+        //}
 
         public IWebDriver Driver { get => driver; set => driver = value; }
 

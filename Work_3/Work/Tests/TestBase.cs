@@ -2,6 +2,7 @@
 using NUnit.Framework;
 namespace Work_3.Work
 {
+    
 	public class TestBase
     { 
         protected ApplicationManager app;
@@ -11,11 +12,12 @@ namespace Work_3.Work
         {
             app = ApplicationManager.GetInstance();
         }
-        [OneTimeTearDown]
-        public void StopApplicationManager()
-        {
-            app.Stop();
-        }
+
+        //[OneTimeTearDown]
+        //public void StopApplicationManager()
+        //{
+        //    app.Stop();
+        //}
     }
 }
 

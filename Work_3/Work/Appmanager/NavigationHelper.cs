@@ -19,12 +19,21 @@ namespace Work_3.Work
 
         public void GotoGroupsPage()
         {
+            if (driver.Url == baseURL + "/group.php"
+                && IsElementPresent(By.Name("new")))
+            {
+                return;
+            }
             driver.FindElement(By.LinkText("groups")).Click();
         }
 
         public void GotoHomePage()
         {
-            driver.FindElement(By.LinkText("home")).Click();
+            if (driver.Url == baseURL)
+            {
+                return;
+            }
+            driver.Navigate().GoToUrl(baseURL);
         }
 
         //Homework
