@@ -136,6 +136,17 @@ namespace Work_3.Work
             return this;
         }
 
+        public List<GroupDate> GitGroupList()
+        {
+            List<GroupDate> groups = new List<GroupDate>();
+            manager.Navigator.GotoGroupsPage();
+            ICollection<IWebElement> elements = driver.FindElements(By.CssSelector("span.group"));
+            foreach (var item in elements)
+            {
+                groups.Add(new GroupDate(item.Text));
+            }
+            return groups;
+        }
     }
 }
 

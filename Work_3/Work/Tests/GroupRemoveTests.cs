@@ -8,7 +8,7 @@ namespace Work_3.Work
         [Test]
         public void GroupRemoveTest()
         {
-            app.Groups.Remove(1);   
+            app.Groups.Remove(1);
         }
     }
 }

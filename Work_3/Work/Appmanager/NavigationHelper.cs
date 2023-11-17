@@ -14,6 +14,10 @@ namespace Work_3.Work
 
         public void OpenHomePage()
         {
+            if (driver.Url == baseURL)
+            {
+                return;
+            }
             driver.Navigate().GoToUrl(baseURL);
         }
 
@@ -33,12 +37,17 @@ namespace Work_3.Work
             {
                 return;
             }
-            driver.Navigate().GoToUrl(baseURL);
+            driver.FindElement(By.LinkText("home")).Click();
         }
 
         //Homework
         public void GoToAddNew()
         {
+            if (driver.Url == baseURL + "/edit.php"
+                && IsElementPresent(By.Name("submit")))
+            {
+                return;
+            }
             driver.FindElement(By.LinkText("add new")).Click();
         }
     }
