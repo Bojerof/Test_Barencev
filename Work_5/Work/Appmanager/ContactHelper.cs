@@ -171,6 +171,32 @@ namespace Work_5.Work
             
             return Int32.Parse(text);
         }
-    }
+
+        public ContactData GetContactInfomationFromInfoTable(int index)
+        {
+            manager.Navigator.GotoHomePage();
+            driver.FindElement(By.XPath($"//*[@name='entry'][{index + 1}]/*[@class='center'][2]")).Click();
+            string[] titles = driver.FindElement(By.Id("content")).FindElement(By.TagName("b")).Text.Split(" ");
+            IList<IWebElement> adressAndPhones = driver.FindElement(By.Id("content")).FindElements(By.TagName("br"));
+
+            string firstName = titles[0];
+            string lastName = titles[2];
+            string adress = adressAndPhones[1].Text;
+            string homePhone = adressAndPhones[2].Text;
+            string mobilePhone = adressAndPhones[3].Text;
+            string workPhone = adressAndPhones[4].Text;
+            string phone2 = adressAndPhones[10].Text;
+
+            return new ContactData(firstName)
+            {
+                Lastname = lastName,
+                Adress = adress,
+                Homephone = homePhone,
+                Workphone = workPhone,
+                Mobilephone = mobilePhone,
+                Phone2 = phone2
+            };
+        }
+    }       
 }
 
