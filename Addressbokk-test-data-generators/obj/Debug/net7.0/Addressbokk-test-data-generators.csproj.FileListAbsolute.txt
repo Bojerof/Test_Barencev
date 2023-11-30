@@ -111,3 +111,7 @@
 /Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/bin/Debug/net7.0/Work_6.dll
 /Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/bin/Debug/net7.0/Work_6.pdb
 /Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/obj/Debug/net7.0/Addressbokk-test-data-generators.csproj.CopyComplete
+/Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/bin/Debug/net7.0/group.xml
+/Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/bin/Debug/net7.0/groups.json
+/Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/bin/Debug/net7.0/group.csv
+/Users/bojeroff/Projects/Test_Barencev/Addressbokk-test-data-generators/bin/Debug/net7.0/Microsoft.Office.Interop.Excel.dll

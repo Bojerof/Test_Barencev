@@ -40,7 +40,11 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.5.0, )"
+              "version": "[17.8.0, )"
+            },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
             },
             "NUnit": {
               "target": "Package",
@@ -49,6 +53,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Selenium.Support": {
               "target": "Package",
@@ -62,7 +70,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.2.0, )"
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

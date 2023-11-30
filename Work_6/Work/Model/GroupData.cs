@@ -7,6 +7,7 @@
         {
             Name = name;
         }
+        public GroupData() { }
 
         public GroupData(string name, string header, string footer) : this(name)
         {

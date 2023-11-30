@@ -1,5 +1,7 @@
 ﻿using System.Security.Cryptography;
 using NUnit.Framework;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Work_6.Work
 {
@@ -20,11 +22,11 @@ namespace Work_6.Work
             return groups;
         }
 
-        public static IEnumerable<GroupData> GroupDataFromFile()
+        public static IEnumerable<GroupData> GroupDataFromCsvFile()
         {
             List<GroupData> groups = new List<GroupData>();
 
-            string[] lines = File.ReadAllLines(@"groups.csv");
+            string[] lines = File.ReadAllLines(@"group.csv");
             foreach (var l in lines)
             {
                 string[] parts = l.Split(",");
@@ -38,7 +40,19 @@ namespace Work_6.Work
             return groups;
         }
 
-        [Test, TestCaseSource("GroupDataFromFile")]
+        public static IEnumerable<GroupData> GroupDataFromXmlFile()
+        {
+            return (List<GroupData>)
+                new XmlSerializer(typeof(List<GroupData>)).Deserialize(new StreamReader(@"group.xml"));            
+        }
+
+        public static IEnumerable<GroupData> GroupDataFromJsonFile()
+        {
+            return JsonConvert.DeserializeObject<List<GroupData>>(
+                File.ReadAllText(@"groups.json"));
+        }
+
+        [Test, TestCaseSource("GroupDataFromJsonFile")]
         public void GroupCreationTest(GroupData group)
         {
             
